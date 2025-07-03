@@ -1,0 +1,481 @@
+/* Variáveis de Cores */
+:root {
+    --primary-pink: #f78bc1; /* Rosa Vibrante */
+    --secondary-gold: #f379ce; /* Dourado (ajustado para um rosa forte) */
+    --tertiary-white: #fafafa; /* Branco Puro */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light-pink: #FFE0F0; /* Rosa Claro para seções */
+    --bg-dark-pink: #e75a9e; /* Rosa escuro para botões */
+}
+
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--tertiary-white);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-pink);
+}
+
+a:hover {
+    color: var(--secondary-gold);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-pink);
+    color: var(--tertiary-white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--tertiary-white);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--tertiary-white);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-gold);
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(rgba(255, 105, 180, 0.7), rgba(253, 138, 215, 0.5)), url('https://via.placeholder.com/1500x600?text=FETYSA+MAKEUP+Banner') no-repeat center center/cover;
+    color: var(--tertiary-white);
+    text-align: center;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.btn-cta {
+    background-color: var(--secondary-gold);
+    color: var(--tertiary-white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #f78fc8; /* Dourado um pouco mais escuro */
+    transform: translateY(-3px);
+}
+
+/* Seções de Conteúdo */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-pink);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-gold);
+    border-radius: 2px;
+}
+
+/* Produtos */
+.produtos-section {
+    background-color: var(--bg-light-pink);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.produto-item {
+    background-color: var(--tertiary-white);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 5px rgba(0,0,0,0.15);
+}
+
+.produto-item img {
+    max-width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 1px;
+    margin-bottom: 1rem;
+}
+
+.produto-item h3 {
+    font-size: 1.4rem;
+    color: var(--primary-pink);
+    margin-bottom: 0.5rem;
+}
+
+.produto-item p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.produto-item span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-gold);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.produto-item button {
+    background-color: var(--bg-dark-pink);
+    color: var(--tertiary-white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produto-item button:hover {
+    background-color: var(--primary-pink);
+}
+
+/* --- Estilos para a Nova Galeria de Imagens (Diminuídas e em Fila Horizontal) --- */
+.galeria-section {
+    background-color: var(--bg-light-pink); /* Cor de fundo suave */
+    padding: 4rem 2rem;
+    text-align: center; /* Centraliza o título */
+}
+
+.galeria-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-pink);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.galeria-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-gold);
+    border-radius: 2px;
+}
+
+.galeria-grid {
+    display: flex;         /* Transforma o contêiner em um contêiner flex */
+    flex-wrap: nowrap;     /* IMPEDE que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 1.5rem;           /* Espaço entre as imagens */
+    margin-top: 3rem;
+    overflow-x: auto;      /* Adiciona scroll horizontal se as imagens não couberem */
+    padding-bottom: 1rem;  /* Espaço para o scrollbar, se aparecer */
+    -webkit-overflow-scrolling: touch; /* Melhora o scroll em iOS */
+    scroll-snap-type: x mandatory; /* Ajuda a "grudar" no início de cada item ao rolar */
+}
+
+.galeria-item {
+    background-color: var(--tertiary-white);
+    padding: 0.8rem; /* Diminuímos o padding interno para economizar espaço */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Largura menor e fixa para cada item */
+    min-width: 10px;
+    max-width: 10px;
+    flex-shrink: 0; /* Impede que os itens encolham abaixo do min-width */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start; /* Para o scroll-snap */
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 5px rgba(0,0,0,0.15);
+}
+
+.galeria-item img {
+    max-width: 100%;
+    height: 100px;   /* Altura menor para as imagens */
+    object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+}
+
+.galeria-item p {
+    font-size: 0.95rem; /* Texto um pouco menor */
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+/* Tendências */
+.tendencias-section {
+    background-color: var(--tertiary-white);
+}
+
+.tendencia-item {
+    background-color: var(--bg-light-pink);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.tendencia-item h3 {
+    font-size: 1.8rem;
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+}
+
+.tendencia-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.tendencia-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Cadastro */
+.cadastro-section {
+    background-color: var(--bg-light-pink);
+}
+
+#cadastroForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--tertiary-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#cadastroForm label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+#cadastroForm input[type="text"],
+#cadastroForm input[type="email"],
+#cadastroForm input[type="tel"],
+#cadastroForm input[type="date"] {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#cadastroForm button {
+    background-color: var(--secondary-gold);
+    color: var(--tertiary-white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cadastroForm button:hover {
+    background-color: #e6c200;
+}
+
+.mensagem-cadastro {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+/* Contato */
+.contato-section {
+    background-color: var(--tertiary-white);
+    color: var(--text-dark);
+}
+
+.contato-section p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    background-color: var(--primary-pink);
+    color: var(--tertiary-white);
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    background-color: var(--secondary-gold);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-pink);
+    color: var(--tertiary-white);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    /* --- Responsividade Específica para a Galeria --- */
+    .galeria-grid {
+        justify-content: flex-start; /* Alinha os itens ao início para o scroll */
+        padding: 0 1rem 1rem; /* Adiciona padding nas laterais e abaixo */
+    }
+
+    .galeria-item {
+        min-width: 160px; /* Pode ser um pouco menor em telas muito pequenas */
+        max-width: 160px;
+    }
+
+    .galeria-item img {
+        height: 120px; /* Altura da imagem menor para caber */
+    }
+}
+
+/* Media Query para telas ainda menores (ex: celulares antigos ou muito pequenos) */
+@media (max-width: 480px) {
+    .galeria-item {
+        min-width: 140px;
+        max-width: 140px;
+    }
+    .galeria-item img {
+        height: 100px;
+    }
+}
